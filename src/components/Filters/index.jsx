@@ -7,12 +7,13 @@ import { addTitleFilters } from "../../AC";
 class Filters extends React.Component {
     render() {
         const { articles, addTitleFilters, selected } = this.props;
-        const options = articles.map(article => {
-            return {
-                value: article.id,
-                label: article.title
-            }
-        });
+        const options = [];
+        for (let key in articles) {
+            options.push({
+                value: articles[key].id,
+                label: articles[key].title,
+            })
+        }
         return (
             <div>
                 <Select

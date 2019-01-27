@@ -1,4 +1,4 @@
-import {DELETE_ARTICLE, ADD_DATE_FILTERS, ADD_TITLE_FILTERS} from './constants';
+import {DELETE_ARTICLE, ADD_DATE_FILTERS, ADD_TITLE_FILTERS, ADD_NEW_COMMENT} from './constants';
 
 export const deleteArticle = (id) => {
     return {
@@ -20,3 +20,11 @@ export const addDateFilters = (dates) => {
         payload: dates
     }
 };
+
+export const addNewComment = (comment) => {
+    return {
+        type: ADD_NEW_COMMENT,
+        payload: comment
+    }
+};
+

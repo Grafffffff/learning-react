@@ -41,7 +41,7 @@ class Article extends Component {
         return isOpen
             ? <div className='article-list__item-content'>
                 <p>{article.text}</p>
-                <CommentsList comments={article.comments}/>
+                <CommentsList comments={article.comments} articleId={article.id}/>
               </div>
             : null
     }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { addNewComment } from '../../AC'
+import { connect } from 'react-redux'
 
 const defaultSize = {
     user: {
@@ -23,7 +25,7 @@ class CommentForm extends React.Component {
             || user.length >= defaultSize.user.min) {
             if (text.length <= defaultSize.text.max
                 || text.length >= defaultSize.text.min) {
-                this.props.setNewComment(this.state);
+                this.props.addNewComment({...this.state, articleId: this.props.articleId});
                 return this.setState({user: '', text: ''})
             }
         }
@@ -70,4 +72,4 @@ class CommentForm extends React.Component {
     }
 }
 
-export default CommentForm;
+export default connect(null, { addNewComment })(CommentForm);

@@ -15,8 +15,7 @@ class CommentsList extends Component {
     };
 
     render() {
-        const { isOpen, toggleOpen, comments } = this.props;
-
+        const { isOpen, toggleOpen, comments} = this.props;
         return (
             <div>
                 <button onClick={toggleOpen}>{!isOpen ? 'Show comments' : 'Close comments'}</button>
@@ -28,7 +27,7 @@ class CommentsList extends Component {
     }
 
     getBody = () => {
-        const { isOpen, comments } = this.props;
+        const { isOpen, comments, articleId } = this.props;
 
         return (
             <Fragment>
@@ -37,7 +36,7 @@ class CommentsList extends Component {
                         <Comment id={id}/>
                       </li>)
                     : null}
-                {isOpen ? <CommentForm /> : null}
+                {isOpen ? <CommentForm articleId={articleId} /> : null}
             </Fragment>
         )
 

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import CommentsList from '../CommentsList';
-import { deleteArticle } from '../../AC'
+import { deleteArticle, loadArticle } from '../../AC'
+import Loader from '../Loader'
 
 class Article extends Component {
     static propTypes = {
@@ -14,9 +15,11 @@ class Article extends Component {
         })
     };
 
-    state={
-        isOpen: false
-    };
+    componentWillReceiveProps({isOpen, loadArticle, article}){
+        console.log(article)
+        if (isOpen && !article.text && !article.loading) loadArticle(article.id)
+    }
+
     render() {
         const { article, isOpen, toggleOpen } = this.props;
 
@@ -38,6 +41,8 @@ class Article extends Component {
     getBody = () => {
         const { article, isOpen } = this.props;
 
+        if (article.loading) return <Loader />
+
         return isOpen
             ? <div className='article-list__item-content'>
                 <p>{article.text}</p>
@@ -51,4 +56,4 @@ class Article extends Component {
     }
 }
 
-export default connect(null, { deleteArticle })(Article);
+export default connect(null, { deleteArticle, loadArticle })(Article);

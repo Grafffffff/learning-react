@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2038f20-d1f6-43f7-80c8-d507d1d24e49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Loader.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AC/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AC/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AC/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AC/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ArticleList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ArticleList/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Filters/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filters/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middlewares/createId.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/createId.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ArticleList/Article.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ArticleList/Article.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/articles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/selectors/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,17 +35,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="65" />
+          <entry key="js" value="66" />
           <entry key="json" value="5" />
-          <entry key="jsx" value="63" />
+          <entry key="jsx" value="65" />
           <entry key="scss" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="5" />
-          <entry key="JSX Harmony" value="63" />
-          <entry key="JavaScript" value="65" />
+          <entry key="JSX Harmony" value="65" />
+          <entry key="JavaScript" value="66" />
           <entry key="SCSS" value="5" />
         </counts>
       </usages-collector>
@@ -66,19 +56,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="4569" />
+          <entry key="js" value="5144" />
           <entry key="json" value="55" />
-          <entry key="jsx" value="8156" />
+          <entry key="jsx" value="8398" />
           <entry key="scss" value="584" />
-          <entry key="txt" value="27" />
+          <entry key="txt" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="55" />
-          <entry key="JSX Harmony" value="8156" />
-          <entry key="JavaScript" value="4569" />
-          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="JSX Harmony" value="8398" />
+          <entry key="JavaScript" value="5144" />
+          <entry key="PLAIN_TEXT" value="49" />
           <entry key="SCSS" value="584" />
         </counts>
       </usages-collector>
@@ -98,8 +88,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AC/constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ArticleList/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,8 +109,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AC/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="153">
+              <caret line="45" column="27" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#156#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,17 +121,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/middlewares/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state>
+              <caret column="54" lean-forward="true" selection-start-column="54" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reducer/articles.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -135,22 +140,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ArticleList/index.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/ArticleList/Article.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+            <state relative-caret-position="306">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Loader.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -188,24 +184,24 @@
         <option value="$PROJECT_DIR$/src/components/CommentsList/Comment.jsx" />
         <option value="$PROJECT_DIR$/src/middlewares/logger.js" />
         <option value="$PROJECT_DIR$/src/reducer/filters.js" />
-        <option value="$PROJECT_DIR$/src/components/ArticleList/Article.jsx" />
         <option value="$PROJECT_DIR$/src/components/CommentsList/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/CommentsList/CommentForm.jsx" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/setupProxy.js" />
-        <option value="$PROJECT_DIR$/src/store/index.js" />
-        <option value="$PROJECT_DIR$/src/AC/index.js" />
         <option value="$PROJECT_DIR$/src/middlewares/createId.js" />
         <option value="$PROJECT_DIR$/src/reducer/comments.js" />
         <option value="$PROJECT_DIR$/src/components/Filters/index.jsx" />
         <option value="$PROJECT_DIR$/src/helpers.js" />
         <option value="$PROJECT_DIR$/src/selectors/index.jsx" />
-        <option value="$PROJECT_DIR$/src/AC/constants.js" />
         <option value="$PROJECT_DIR$/src/middlewares/api.js" />
-        <option value="$PROJECT_DIR$/src/reducer/articles.js" />
-        <option value="$PROJECT_DIR$/src/components/ArticleList/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/Loader.jsx" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/AC/constants.js" />
+        <option value="$PROJECT_DIR$/src/AC/index.js" />
+        <option value="$PROJECT_DIR$/src/components/ArticleList/Article.jsx" />
+        <option value="$PROJECT_DIR$/src/components/ArticleList/index.jsx" />
+        <option value="$PROJECT_DIR$/src/reducer/articles.js" />
       </list>
     </option>
   </component>
@@ -368,7 +364,7 @@
       <workItem from="1548243985982" duration="354000" />
       <workItem from="1548348990492" duration="3457000" />
       <workItem from="1548602277650" duration="7236000" />
-      <workItem from="1549203135199" duration="11431000" />
+      <workItem from="1549203135199" duration="13959000" />
     </task>
     <task id="LOCAL-00001" summary="create repo">
       <created>1548196787389</created>
@@ -384,11 +380,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548607717634</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add api and immutable">
+      <created>1549219513320</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549219513320</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71398000" />
+    <option name="totallyTimeSpent" value="73926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -447,7 +450,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create repo" />
     <MESSAGE value="complete h.t. 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete h.t. 5" />
+    <MESSAGE value="add api and immutable" />
+    <option name="LAST_COMMIT_MESSAGE" value="add api and immutable" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.test.js" />
@@ -535,16 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ArticleList/Article.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="43" column="79" selection-start-line="43" selection-start-column="79" selection-end-line="43" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CommentsList/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -583,16 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
           <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AC/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/middlewares/createId.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -661,44 +638,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AC/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Loader.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AC/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/middlewares/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state>
+          <caret column="54" lean-forward="true" selection-start-column="54" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer/articles.js">
+    <entry file="file://$PROJECT_DIR$/src/AC/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+        <state relative-caret-position="153">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="27" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#156#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ArticleList/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        <state relative-caret-position="289">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Loader.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/ArticleList/Article.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="306">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducer/articles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

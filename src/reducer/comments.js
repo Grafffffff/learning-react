@@ -7,12 +7,12 @@ const commentsMap = defaultComments.reduce((acc, comment) => {
 }, {})
 
 export default (commentsState = commentsMap, action) => {
-    const {type, payload} = action;
+    const {type, payload, randomId} = action;
     switch (type) {
         case ADD_NEW_COMMENT: return {
             ...commentsState,
-            [payload.id]: {
-                id: payload.id,
+            [randomId]: {
+                id: randomId,
                 user: payload.user,
                 text: payload.text
             }

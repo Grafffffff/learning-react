@@ -3,17 +3,16 @@ import Select from 'react-select'
 import DatePicker from './DatePicker'
 import { connect } from 'react-redux'
 import { addTitleFilters } from "../../AC";
+import { mapToArr } from '../../helpers'
 
 class Filters extends React.Component {
     render() {
         const { articles, addTitleFilters, selected } = this.props;
-        const options = [];
-        for (let key in articles) {
-            options.push({
-                value: articles[key].id,
-                label: articles[key].title,
+        const options = articles.map( article => ({
+                value: article.id,
+                label: article.title,
             })
-        }
+        );
         return (
             <div>
                 <Select
@@ -30,6 +29,6 @@ class Filters extends React.Component {
 }
 
 export default connect(state => ({
-    articles: state.articles,
+    articles: mapToArr(state.articles.entities),
     selected: state.filters.titles
 }), { addTitleFilters })(Filters)

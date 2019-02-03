@@ -1,27 +1,40 @@
-import {normalizedArticles as defaultArticles} from '../fixtures';
-import { DELETE_ARTICLE, ADD_NEW_COMMENT } from '../AC/constants'
+import { arrToMap } from '../helpers'
+import { DELETE_ARTICLE, ADD_NEW_COMMENT, LOAD_ALL_ARTICLES, SUCCESS, START } from '../AC/constants'
+import { OrderedMap, Record } from 'immutable'
 
-const articlesMap = defaultArticles.reduce((acc, article) => {
-    acc[article.id] = article;
-    return acc
-}, {});
+const ArticleRecord = Record({
+    text: undefined,
+    title: '',
+    date: undefined,
+    id: undefined,
+    comments: []
+});
 
-export default (articlesState = articlesMap, action) => {
-    const {type, payload} = action;
+const ReducerState = Record({
+    loading: false,
+    loaded: false,
+    entities: new OrderedMap({})
+})
+
+const defaultState = new ReducerState();
+
+export default (articlesState = defaultState, action) => {
+    const {type, payload, response, randomId } = action;
     switch (type) {
         case DELETE_ARTICLE:
-            delete articlesState[payload.id];
-            return articlesState;
-        case ADD_NEW_COMMENT: return {
-            ...articlesState,
-            [payload.articleId]: {
-                ...articlesState[payload.articleId],
-                comments: [
-                    ...articlesState[payload.articleId].comments,
-                    payload.id
-                ]
-            }
-        };
+            return articlesState.deleteIn(['entities', payload.id]);
+        case ADD_NEW_COMMENT:
+            return articlesState.updateIn(
+                ['entities', payload.articleId, 'comments'],
+                    comments => comments.concat(randomId)
+            );
+        case LOAD_ALL_ARTICLES + START:
+            return articlesState.set('loading', true);
+        case LOAD_ALL_ARTICLES + SUCCESS:
+            return articlesState
+                .set('entities', arrToMap(response, ArticleRecord))
+                .set('loading', false)
+                .set('loaded', true);
         default: return articlesState
     }
 }

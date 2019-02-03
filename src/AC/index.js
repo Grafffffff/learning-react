@@ -1,4 +1,4 @@
-import {DELETE_ARTICLE, ADD_DATE_FILTERS, ADD_TITLE_FILTERS, ADD_NEW_COMMENT} from './constants';
+import {DELETE_ARTICLE, ADD_DATE_FILTERS, ADD_TITLE_FILTERS, ADD_NEW_COMMENT, LOAD_ALL_ARTICLES} from './constants';
 
 export const deleteArticle = (id) => {
     return {
@@ -24,7 +24,15 @@ export const addDateFilters = (dates) => {
 export const addNewComment = (comment) => {
     return {
         type: ADD_NEW_COMMENT,
-        payload: comment
+        payload: comment,
+        randomId: true
     }
 };
+
+export function loadAllArticles() {
+    return {
+        type: LOAD_ALL_ARTICLES,
+        callAPI: '/api/article'
+    }
+}
 

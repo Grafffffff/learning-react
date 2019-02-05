@@ -25,7 +25,7 @@ class Comment extends Component {
 }
 
 const mapStateToProps = () => {
-    const commentSelector = commentSelectorFactory()
+    const commentSelector = commentSelectorFactory();
     return (state, ownProps) => {
         return {
             comment: commentSelector(state, ownProps)

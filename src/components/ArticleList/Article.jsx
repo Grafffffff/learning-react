@@ -16,7 +16,6 @@ class Article extends Component {
     };
 
     componentWillReceiveProps({isOpen, loadArticle, article}){
-        console.log(article)
         if (isOpen && !article.text && !article.loading) loadArticle(article.id)
     }
 
@@ -46,7 +45,10 @@ class Article extends Component {
         return isOpen
             ? <div className='article-list__item-content'>
                 <p>{article.text}</p>
-                <CommentsList comments={article.comments} articleId={article.id}/>
+                <CommentsList
+                    comments={article.comments}
+                    article={article}
+                />
               </div>
             : null
     }

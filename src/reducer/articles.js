@@ -1,5 +1,13 @@
 import { arrToMap } from '../helpers'
-import {DELETE_ARTICLE, ADD_NEW_COMMENT, LOAD_ALL_ARTICLES, SUCCESS, START, LOAD_ARTICLE} from '../AC/constants'
+import {
+    DELETE_ARTICLE,
+    ADD_NEW_COMMENT,
+    LOAD_ALL_ARTICLES,
+    SUCCESS,
+    START,
+    LOAD_ARTICLE,
+    LOAD_ARTICLE_COMMENTS
+} from '../AC/constants'
 import { OrderedMap, Record } from 'immutable'
 
 const ArticleRecord = Record({
@@ -8,12 +16,9 @@ const ArticleRecord = Record({
     date: undefined,
     id: undefined,
     loading: false,
+    commentsLoading: false,
+    commentsLoaded: false,
     comments: []
-});
-const CommentRecord = Record({
-    text: undefined,
-    user: undefined,
-    id: undefined
 });
 
 const ReducerState = Record({
@@ -45,6 +50,12 @@ export default (articlesState = defaultState, action) => {
             return articlesState.setIn(['entities', payload.id, 'loading'], true);
         case LOAD_ARTICLE+SUCCESS:
             return articlesState.setIn(['entities', payload.id], new ArticleRecord(payload.response));
+        case LOAD_ARTICLE_COMMENTS + START:
+            return articlesState.setIn(['entities', payload.articleId, 'commentsLoading'], true);
+        case LOAD_ARTICLE_COMMENTS + SUCCESS:
+            return articlesState
+                .setIn(['entities', payload.articleId, 'commentsLoading'], false)
+                .setIn(['entities', payload.articleId, 'commentsLoaded'], true);
         default: return articlesState
     }
 }

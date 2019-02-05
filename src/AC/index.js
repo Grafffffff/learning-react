@@ -4,6 +4,7 @@ import {
     ADD_TITLE_FILTERS,
     ADD_NEW_COMMENT,
     LOAD_ALL_ARTICLES,
+    LOAD_ARTICLE_COMMENTS,
     LOAD_ARTICLE, START, SUCCESS, FAIL
 } from './constants';
 
@@ -28,10 +29,10 @@ export const addDateFilters = (dates) => {
     }
 };
 
-export const addNewComment = (comment) => {
+export const addNewComment = (comment, articleId) => {
     return {
         type: ADD_NEW_COMMENT,
-        payload: comment,
+        payload: { comment, articleId },
         randomId: true
     }
 };
@@ -62,6 +63,16 @@ export function loadArticle(id) {
                     payload: { id, error}
                 }))
         }, 1000)
+    }
+}
+
+export function loadArticleComments(articleId) {
+    return (dispatch) => {
+        dispatch({
+            type: LOAD_ARTICLE_COMMENTS,
+            payload: { articleId },
+            callAPI: `/api/comment?article=${articleId}`
+        });
     }
 }
 

@@ -9,4 +9,6 @@ const enhancer = applyMiddleware(thunk, createId, api, logger);
 
 const store = createStore(reducer, {}, enhancer);
 
+window.store = store;
+
 export default store;

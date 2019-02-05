@@ -25,7 +25,7 @@ class CommentForm extends React.Component {
             || user.length >= defaultSize.user.min) {
             if (text.length <= defaultSize.text.max
                 || text.length >= defaultSize.text.min) {
-                this.props.addNewComment({...this.state, articleId: this.props.articleId});
+                this.props.addNewComment({...this.state}, this.props.articleId);
                 return this.setState({user: '', text: ''})
             }
         }

@@ -25,7 +25,7 @@ class ArticleList extends Component {
     render() {
         const { articles, openItemId, toggleOpen, loading } = this.props;
 
-        if (loading) return <Loader />
+        if (loading) return <Loader />;
 
         const articleElements = articles.map(article => <li key={article.id} >
             <Article article={article} toggleOpen={toggleOpen} isOpen={openItemId === article.id}/>

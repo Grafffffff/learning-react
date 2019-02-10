@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import {NavLink} from 'react-router-dom'
 
-import Article from './Article'
 import accordeon from '../../decorators/accordeon'
 import { filteredArticlesSelector } from '../../selectors'
 import { loadAllArticles } from '../../AC'
@@ -19,16 +19,18 @@ class ArticleList extends Component {
 
     componentDidMount() {
         const { loading, loaded, loadAllArticles } = this.props;
-        if (!loaded || !loading) loadAllArticles();
+        if (!loaded && !loading) loadAllArticles();
     }
 
     render() {
-        const { articles, openItemId, toggleOpen, loading } = this.props;
+        const { articles, loading } = this.props;
 
         if (loading) return <Loader />;
 
         const articleElements = articles.map(article => <li key={article.id} >
-            <Article article={article} toggleOpen={toggleOpen} isOpen={openItemId === article.id}/>
+            <NavLink activeStyle={{color: 'black'}} to = {`/articles/${article.id}`}>
+                {article.title}
+            </NavLink>
         </li> );
 
         return (

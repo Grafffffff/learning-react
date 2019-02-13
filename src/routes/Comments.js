@@ -1,21 +1,12 @@
 import React from 'react';
-import CommentsList from '../components/CommentsList'
-import {Route} from 'react-router-dom'
+import CommentsPagination from '../components/CommentsPagination'
 
-class Comments extends React.Component {
-    getComments = ({match}) => {
-        const {page} = match.params;
-
-        return <CommentsList page={page}/>
-    };
-
-    render() {
-        return (
-            <div>
-                <Route path = '/comments/:page' render = {this.getComments}/>
-            </div>
-        )
-    }
+function CommentsPage({match}) {
+    return (
+        <div>
+            <CommentsPagination page={match.params.page}/>
+        </div>
+    )
 }
 
-export default Comments
+export default CommentsPage

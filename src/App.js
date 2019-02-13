@@ -23,7 +23,7 @@ class App extends Component {
                     <Route path={'/filters'} component={Filters}/>
                     <Route path={'/articles/new'} component={NewArticle}/>
                     <Route path={'/articles'} component={Articles}/>
-                    <Route path={'/comments'} component={Comments}/>
+                    <Route path={'/comments/:page'} component={Comments}/>
                     <Route path={'*'} component={NotFound}/>
                 </Switch>
             </div>

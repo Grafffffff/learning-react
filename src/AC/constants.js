@@ -8,6 +8,7 @@ export const ADD_DATE_FILTERS = 'ADD_DATE_FILTERS';
 
 export const LOAD_ARTICLE_COMMENTS = 'LOAD_ARTICLE_COMMENTS';
 export const ADD_NEW_COMMENT = 'ADD_NEW_COMMENT';
+export const LOAD_COMMENTS_FOR_PAGE = 'LOAD_COMMENTS_FOR_PAGE';
 
 export const START = '_START';
 export const SUCCESS = '_SUCCESS';
